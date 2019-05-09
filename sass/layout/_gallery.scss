@@ -46,8 +46,6 @@
       transform: translate(-50%, -50%);
       max-width: 80vw;
       max-height: 90vh;
-      border: 5px solid var(--white);
-      border-radius: 5px;
       @include respond(phone) {
         max-height: 95vh;
         max-width: 95vw;
