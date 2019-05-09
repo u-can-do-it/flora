@@ -1,0 +1,46 @@
+.progress {
+  &-box {
+    width: 100%;
+    margin-left: 2rem;
+  }
+  &__name {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    @include respond(tab-land) {
+      color: var(--white);
+    }
+  }
+  &__axis {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--white);
+    width: 90%;
+    height: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  &__line {
+    height: 100%;
+
+    &--1 {
+      width: 70%;
+      background-color: var(--blue);
+    }
+    &--2 {
+      width: 50%;
+      background-color: var(--orange);
+    }
+    &--3 {
+      width: 40%;
+      background-color: var(--red);
+    }
+    &--4 {
+      width: 99%;
+      background-color: var(--pink);
+    }
+    &--5 {
+      width: 100%;
+      background-color: var(--cyan);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.feature-box {
+  background-color: var(--white);
+  padding: 1rem;
+  &--mid {
+    background-color: var(--light-green);
+  }
+
+  &__icon {
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: var(--bright-red);
+  }
+  &__title {
+    margin: 1rem 0 1rem;
+    @include respond(phone) {
+      margin: 0.5rem 0 0.5rem;
+    }
+  }
+  &__paragraph {
+  }
+}

@@ -1,0 +1,174 @@
+.section {
+  // ---- SECTION--ABOUT-----
+
+  &-about {
+    position: relative;
+    z-index: 100;
+    margin-top: -10rem;
+    margin-bottom: 3rem;
+
+    @include respond(phone) {
+      margin-top: 0;
+    }
+    &__container {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      @include respond(tab-land) {
+        width: 100%;
+      }
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__box {
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      padding: 6rem 2rem;
+      max-width: 30rem;
+      @include respond(tab-land) {
+        max-width: 60rem;
+      }
+    }
+    &__icon {
+      height: 3.5rem;
+      width: 3.5rem;
+      fill: var(--bright-red);
+    }
+    &__title {
+      margin: 1rem 0 1rem;
+    }
+    &__paragraph {
+    }
+  }
+
+  // ---- SECTION--INFO-----
+
+  &-info {
+    position: relative;
+
+    &-container {
+      width: 80%;
+      overflow: visible;
+      @include respond(tab-land) {
+        width: 90%;
+      }
+    }
+    &__btn {
+      display: inline-block;
+      margin: 4rem 0 2rem 0;
+    }
+  }
+
+  // ---- SECTION--STATISTICS-----
+
+  &-statistics {
+    background-image: url(../img/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-black, 1),
+          rgba($color-black, 0.1)
+        ),
+        url(../img/img2.jpg);
+    }
+
+    &__container {
+      padding: 8rem 0;
+      width: 50%;
+      float: right;
+      @include respond(tab-land) {
+        width: 80%;
+        margin: 0 auto;
+        float: none;
+      }
+    }
+  }
+
+  // ---- SECTION--FEATURES-----
+
+  &-features {
+    // width: 70%;
+    // @include respond(tab-port) {
+    //   width: 85%;
+    // }
+    &__container {
+      margin: 0 auto;
+      width: 70%;
+      display: flex;
+      justify-content: space-evenly;
+      @include respond(tab-land) {
+        width: 85%;
+      }
+      @include respond(tab-port) {
+        width: 95%;
+      }
+      @include respond(phone) {
+        flex-direction: column;
+      }
+    }
+
+    &__box {
+      flex-basis: 20%;
+      max-width: 25rem;
+      @include respond(phone) {
+        max-width: 100%;
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+  &-gallery {
+    width: 100%;
+  }
+
+  // ---- SECTION--CONTACT-----
+
+  &-contact {
+    &__map {
+      overflow: hidden;
+      width: 80%;
+      height: 40vw;
+      margin: 0 auto;
+      border-radius: 10px;
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+    &__form {
+      width: 50%;
+      margin: 0 auto;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      @include respond(tab-land) {
+        width: 70%;
+      }
+      @include respond(phone) {
+        width: 95%;
+      }
+    }
+  }
+
+  // ---- SECTION--TESTIMONIALS-----
+
+  &-testimonials {
+    background-image: linear-gradient(
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url(../img/img11.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &__conteiner {
+      padding: 10rem 0;
+      width: 60%;
+    }
+  }
+}

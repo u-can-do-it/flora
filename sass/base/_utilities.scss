@@ -1,0 +1,32 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-m-top-bottom-mid {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+.u-box-center {
+  margin: 0 auto;
+}
+.u-m-top-big {
+  margin-top: 15rem !important;
+  @include respond(phone) {
+    margin-top: 5rem !important;
+  }
+}
+.u-m-top-small {
+  margin-top: 1.5rem !important;
+}
+.u-m-top-mid {
+  margin-top: 3rem !important;
+  @include respond(phone) {
+    margin-top: 2rem !important;
+  }
+}
+.u-m-bottom-mid {
+  margin-bottom: 3rem !important;
+}
+.u-text--white {
+  color: var(--white) !important;
+}
