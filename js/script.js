@@ -17,7 +17,7 @@ for (const link of navLink) {
 for (const img of galleryImgs) {
   img.addEventListener('click', () => {
     const imgClone = img.cloneNode(true);
-    imgClone.classList.remove('gallery__item');
+    imgClone.classList.remove('gallery__img');
     imgClone.classList.add('gallery__item--full');
     gallery.appendChild(imgClone);
 

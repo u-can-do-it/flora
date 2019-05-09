@@ -39,8 +39,17 @@
       grid-column: 4 / 5;
     }
     &--full {
-      position: absolute;
-      height: 95vh;
+      z-index: 9000;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 80vw;
+      max-height: 90vh;
+      @include respond(phone) {
+        max-height: 95vh;
+        max-width: 95vw;
+      }
     }
   }
   &__img {
