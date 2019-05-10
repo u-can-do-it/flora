@@ -244,6 +244,17 @@ body {
       bottom: -11rem;
       right: -3rem; }
 
+.backdrop {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }
+  .backdrop--active {
+    z-index: 8999;
+    background-color: rgba(0, 0, 0, 0.5); }
+
 .article {
   position: relative;
   display: flex;
@@ -582,7 +593,9 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 80vw;
-  max-height: 90vh; }
+  max-height: 90vh;
+  border: 5px solid var(--white);
+  border-radius: 5px; }
   @media only screen and (max-width: 37.5em) {
     .gallery__item--full {
       max-height: 95vh;
