@@ -3,6 +3,8 @@ const navLink = document.querySelectorAll('.navigation-mobile__link');
 const checkbox = document.querySelector('.navigation-mobile__checkbox');
 const body = document.querySelector('body');
 const galleryImgs = document.querySelectorAll('.gallery__img');
+const backdrop = document.querySelector('.backdrop');
+
 let galleryFlag = false;
 
 const gallery = document.querySelector('.section-gallery');
@@ -23,8 +25,10 @@ for (const img of galleryImgs) {
       imgClone.classList.add('gallery__item--full');
       gallery.appendChild(imgClone);
       galleryFlag = true;
+      backdrop.classList.add('backdrop--active');
       imgClone.addEventListener('click', () => {
         imgClone.remove();
+        backdrop.classList.remove('backdrop--active');
         galleryFlag = false;
       });
     }
