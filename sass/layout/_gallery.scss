@@ -12,51 +12,6 @@
     }
   }
 
-  &-big {
-    z-index: 9000;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-
-    &__container {
-      position: absolute;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      &--img {
-        position: relative;
-      }
-    }
-
-    &__img {
-      max-width: 80vw;
-      max-height: 90vh;
-      border: 5px solid var(--white);
-      border-radius: 5px;
-
-      @include respond(phone) {
-        max-height: 95vh;
-        max-width: 95vw;
-      }
-    }
-
-    &__button {
-      height: 4rem;
-      width: 4rem;
-      cursor: pointer;
-      &--close {
-        position: absolute;
-        top: -2.5rem;
-        right: -4rem;
-      }
-    }
-  }
-
   &__item {
     @include respond(phone) {
       margin-top: 0.5rem;
@@ -91,23 +46,6 @@
       grid-row: 1 / span 2;
       grid-column: 4 / 5;
     }
-
-    &-big {
-      z-index: 9000;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 80vw;
-      max-height: 90vh;
-      border: 5px solid var(--white);
-      border-radius: 5px;
-
-      @include respond(phone) {
-        max-height: 95vh;
-        max-width: 95vw;
-      }
-    }
   }
 
   &__img {
@@ -116,9 +54,68 @@
     object-fit: cover;
     display: block;
   }
-
-  &-button {
+  &-big {
+    z-index: 9000;
     position: fixed;
-    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    &__container {
+      position: relative;
+
+      &--img {
+      }
+    }
+
+    &__img {
+      max-width: 80vw;
+      max-height: 90vh;
+      border: 5px solid var(--white);
+      border-radius: 5px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      overflow: visible;
+      transform: translate(-50%, -50%);
+      @include respond(phone) {
+        max-height: 95vh;
+        max-width: 95vw;
+      }
+    }
+
+    &__button {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 4rem;
+      width: 1.5rem;
+      cursor: pointer;
+      @include respond(phone) {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+      &--prev {
+        margin-left: 1rem;
+        @include respond(phone) {
+          margin-left: 4rem;
+        }
+      }
+      &--next {
+        right: 7.5px;
+        margin-right: 2rem;
+        @include respond(phone) {
+          margin-right: 5rem;
+        }
+      }
+      &--close {
+        width: unset;
+        top: 100%;
+        left: 50%;
+
+        transform: translateY(-100%);
+      }
+    }
   }
 }
