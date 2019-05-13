@@ -6,7 +6,7 @@ const galleryImgs = [...document.querySelectorAll(".gallery__img")];
 
 const backdrop = document.querySelector(".backdrop");
 
-let galleryFlag = false;
+let isGalleryBigPresent = false;
 
 const gallery = document.querySelector(".section-gallery");
 
@@ -20,12 +20,12 @@ for (const link of navLink) {
 
 galleryImgs.forEach((img, index, imgArr) => {
   img.addEventListener("click", () => {
-    if (!galleryFlag) {
+    if (!isGalleryBigPresent) {
       const imgClone = img.cloneNode(true);
       imgClone.classList.remove("gallery__img");
       imgClone.classList.add("gallery__item--big");
       showGalleryBig(img);
-      galleryFlag = true;
+      isGalleryBigPresent = true;
       backdrop.classList.add("backdrop--active");
 
       const next = document.querySelector("#next");
@@ -37,8 +37,9 @@ galleryImgs.forEach((img, index, imgArr) => {
       close.addEventListener("click", () => {
         document.querySelector(".gallery-big").remove();
         backdrop.classList.remove("backdrop--active");
-        galleryFlag = false;
+        isGalleryBigPresent = false;
       });
+
       next.addEventListener("click", () => {
         i = (i + 1 + imgArr.length) % imgArr.length;
         galleryImg.src = imgArr[i].src;
@@ -54,24 +55,31 @@ galleryImgs.forEach((img, index, imgArr) => {
   });
 });
 
+backdrop.addEventListener("click", () => {
+  document.querySelector(".gallery-big").remove();
+  backdrop.classList.remove("backdrop--active");
+  isGalleryBigPresent = false;
+});
+
 function showGalleryBig(img) {
   const html = `
   <div class="gallery-big">
-  <div class="gallery-big__container">
+ 
       <a class="gallery-big__button gallery-big__button--prev" id="prev">
           <i class="fas fa-angle-left fa-3x"></i>
       </a>
-      <div class="gallery-big__container--img">
+  
           <a class="gallery-big__button gallery-big__button--close" id="close" >
               <i class="fas fa-times fa-3x"></i>
           </a>
           <img src="${img.src}" alt="${img.src}" class="gallery-big__img">
-      </div>
+    
       <a class="gallery-big__button gallery-big__button--next" id="next">
           <i class="fas fa-angle-right fa-3x"></i>
       </a>
-  </div>
+ 
 
-</div>`;
+</div>
+  `;
   gallery.insertAdjacentHTML("beforeend", html);
 }
