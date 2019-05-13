@@ -167,6 +167,7 @@
         }
       }
       &--close {
+
         display: none;
         @include respond(phone) {
           display: block;
@@ -174,6 +175,7 @@
           left: 50%;
           transform: translateX(-50%);
         }
+
       }
     }
   }
