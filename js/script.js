@@ -3,11 +3,8 @@ const navLink = document.querySelectorAll(".navigation-mobile__link");
 const checkbox = document.querySelector(".navigation-mobile__checkbox");
 const body = document.querySelector("body");
 const galleryImgs = [...document.querySelectorAll(".gallery__img")];
-
 const backdrop = document.querySelector(".backdrop");
-
 let isGalleryBigPresent = false;
-
 const gallery = document.querySelector(".section-gallery");
 
 year.textContent = new Date().getFullYear();
