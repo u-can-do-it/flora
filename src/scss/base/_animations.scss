@@ -16,3 +16,14 @@
     transform: translateY(13rem) translateX(-50%);
   }
 }
+@keyframes slide-from-top {
+  65% {
+    top: 55%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.show {
+  animation: show 1.5s;
+}
