@@ -1,3 +1,4 @@
+// Big gallery animations
 const gallery = () => {
   const body = document.querySelector("body");
   const galleryImgs = [...document.querySelectorAll(".gallery__img")];

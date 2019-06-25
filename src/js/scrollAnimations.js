@@ -32,7 +32,7 @@ scrollAnimations = function() {
         elems[i].className = elems[i].className.replace("hidden", "show");
       }
     }
-    // growing progress bars in statistics
+    //  progress bars animations in statistics
     for (let i = 0; i < progres.length; i++) {
       let positionFromTop = statistics.getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= -300) {
@@ -40,6 +40,7 @@ scrollAnimations = function() {
       }
     }
     // nav bar apearing after defined scroll
+
     if (window.pageYOffset >= 636) {
       nav.classList.add("navigation__nav--sticky");
     } else {

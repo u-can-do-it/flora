@@ -1,8 +1,17 @@
+document.getElementById("contact--form").addEventListener("submit", event => {
+  event.preventDefault();
+  const inputIds = ["name", "subject", "email", "phone-number", "message"];
+  const getInputValue = id => {
+    return document.getElementById(id);
+  };
+});
+
 const dynamicContent = () => {
   document.querySelector(".year").textContent = new Date().getFullYear();
 };
 dynamicContent();
 
+// Big gallery animations
 const gallery = () => {
   const body = document.querySelector("body");
   const galleryImgs = [...document.querySelectorAll(".gallery__img")];
@@ -78,6 +87,7 @@ const gallery = () => {
 };
 gallery();
 
+// minimalizing mobile navigation after click on a link
 const navigation = () => {
   const navLink = document.querySelectorAll(".navigation-mobile__link");
   const checkbox = document.querySelector(".navigation-mobile__checkbox");
@@ -124,7 +134,7 @@ scrollAnimations = function() {
         elems[i].className = elems[i].className.replace("hidden", "show");
       }
     }
-    // growing progress bars in statistics
+    //  progress bars animations in statistics
     for (let i = 0; i < progres.length; i++) {
       let positionFromTop = statistics.getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= -300) {
@@ -132,6 +142,7 @@ scrollAnimations = function() {
       }
     }
     // nav bar apearing after defined scroll
+
     if (window.pageYOffset >= 636) {
       nav.classList.add("navigation__nav--sticky");
     } else {
