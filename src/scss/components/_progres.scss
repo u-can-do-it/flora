@@ -21,9 +21,23 @@
   }
   &__line {
     height: 100%;
-
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    background: #444;
+    appearance: none;
+    animation: all 2s;
+    transition: all 3s;
+    &::-webkit-progress-bar {
+      background-color: var(--white);
+    }
+    &::-webkit-progress-value {
+      background-color: var(--green);
+      transition: all 1s;
+    }
     &--1 {
       width: 70%;
+
       background-color: var(--blue);
     }
     &--2 {

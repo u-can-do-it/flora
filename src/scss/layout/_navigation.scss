@@ -1,16 +1,16 @@
 .navigation {
   &__nav {
-    position: relative;
-    position: fixed;
+    color: var(--white);
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
-    // background-color: var(--white);
+
     width: 100%;
     display: inline-block;
     padding: 0.3rem 10% 0.3rem 20%;
     display: flex;
-
+    background-color: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -19,6 +19,13 @@
     }
     @include respond(phone) {
       display: none;
+    }
+    &--sticky {
+      position: fixed;
+      background-color: var(--white);
+      color: var(--black);
+      animation: zzz 0.5s;
+      transform-origin: top;
     }
   }
   &__item {
@@ -43,7 +50,7 @@
       padding-top: 1rem;
       visibility: hidden;
       opacity: 0;
-      background-color: var(--white);
+      // background-color: var(--white);
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
       transition: all 0.3s;
     }
@@ -51,6 +58,7 @@
   &__link {
     &:link,
     &:visited {
+      background-color: inherit;
       display: inline-block;
       font-size: 1.7rem;
       font-weight: 400;
@@ -58,7 +66,7 @@
       width: 100%;
       text-decoration: none;
       text-transform: uppercase;
-      color: var(--dark);
+      color: inherit;
     }
   }
   &--nested {

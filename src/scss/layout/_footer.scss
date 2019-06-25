@@ -3,6 +3,7 @@
   font-size: 1.4rem;
   margin-top: 5rem;
   &__container {
+    border-top: 1px solid var(--dark);
     display: flex;
     @include respond(phone) {
       flex-direction: column;
