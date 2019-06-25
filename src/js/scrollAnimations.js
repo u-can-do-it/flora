@@ -1,4 +1,4 @@
-animateHTML = function() {
+scrollAnimations = function() {
   let elems;
   let windowHeight;
   let nav;
@@ -13,10 +13,10 @@ animateHTML = function() {
     for (let i = 0; i < progres.length; i++) {
       progresVal.push(progres[i].value);
       progres[i].value = 0;
-      console.log(progres[i].value);
     }
-    console.log(progres);
+
     statistics = document.querySelector("#statistics");
+
     addEventHandlers();
     checkPosition();
   }
@@ -25,29 +25,29 @@ animateHTML = function() {
     window.addEventListener("resize", init);
   }
   function checkPosition() {
+    // apearing elements on scroll
     for (let i = 0; i < elems.length; i++) {
       let positionFromTop = elems[i].getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= -100) {
         elems[i].className = elems[i].className.replace("hidden", "show");
       }
     }
+    // growing progress bars in statistics
     for (let i = 0; i < progres.length; i++) {
       let positionFromTop = statistics.getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= -300) {
         progres[i].value = progresVal[i];
-        // progres[i].animate((progres[i].value = progresVal[i]), 1000);
       }
     }
-
+    // nav bar apearing after defined scroll
     if (window.pageYOffset >= 636) {
       nav.classList.add("navigation__nav--sticky");
     } else {
       nav.classList.remove("navigation__nav--sticky");
     }
   }
-
   return {
     init: init
   };
 };
-animateHTML().init();
+scrollAnimations().init();
