@@ -7,18 +7,27 @@
   "author": "lukasz",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-core": "^6.26.3",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-ejs": "^4.1.1",
     "gulp-minify-html": "^1.0.6",
     "gulp-sass": "^4.0.2",
-    "gulp-terser": "^1.2.0",
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

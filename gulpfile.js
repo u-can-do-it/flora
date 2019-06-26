@@ -1,12 +1,13 @@
 const gulp = require("gulp"),
   sass = require("gulp-sass"),
-  //uglify = require("gulp-uglify"),
   htmlMin = require("gulp-minify-html"),
   concat = require("gulp-concat"),
   cleanCSS = require("gulp-clean-css"),
   autoprefixer = require("gulp-autoprefixer"),
-  browserSync = require("browser-sync").create(),
-  terser = require("gulp-terser");
+  uglify = require("gulp-uglify"),
+  babel = require("gulp-babel"),
+  browserSync = require("browser-sync").create();
+
 //HTML copy
 gulp.task("html", () => {
   gulp
@@ -29,7 +30,12 @@ gulp.task("js", () => {
   gulp
     .src("src/js/*.js")
     .pipe(concat("script.js"))
-    //  .pipe(terser())
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
+    .pipe(uglify())
     .pipe(gulp.dest("docs/js"));
 });
 
@@ -53,12 +59,7 @@ gulp.task("sass", () => {
       // autoprefixer added
       .pipe(autoprefixer())
       // cleanCSS added
-      .pipe(
-        cleanCSS({
-          compatibility: "*"
-        })
-      )
-      // .pipe(gulp.dest("src/public/stylesheets/css"))
+      .pipe(cleanCSS({ compatibility: "ie8" }))
       .pipe(gulp.dest("docs/css"))
       .pipe(browserSync.stream())
   ); //stream to browser

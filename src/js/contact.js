@@ -31,7 +31,7 @@ document.getElementById("contact--form").addEventListener("submit", event => {
   function submitForm(formData) {
     var newMessageRef = contactRef.push();
     newMessageRef.set(getContactJSON(inputIds), function(error) {
-      error ? alert(error) : messageSentAnimation();
+      error ? alert(error + "\n Try again later.") : messageSentAnimation();
     });
   }
 
