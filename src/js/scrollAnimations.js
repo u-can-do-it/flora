@@ -20,6 +20,7 @@ scrollAnimations = function() {
     addEventHandlers();
     checkPosition();
   }
+
   function addEventHandlers() {
     window.addEventListener("scroll", checkPosition);
     window.addEventListener("resize", init);

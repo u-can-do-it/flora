@@ -30,16 +30,17 @@ gulp.task("js", () => {
   gulp
     .src("src/js/*.js")
     .pipe(concat("script.js"))
-    .pipe(
-      babel({
-        presets: ["@babel/env"]
-      })
-    )
-    .pipe(uglify())
+    // .pipe(
+    //   babel({
+    //     presets: ["@babel/env"]
+    //   })
+    // )
+    // .pipe(uglify())
     .pipe(gulp.dest("docs/js"));
 });
 
 // minify css
+
 gulp.task("minify-css", () => {
   return gulp
     .src("src/css/*.css")
