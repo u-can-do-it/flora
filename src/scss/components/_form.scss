@@ -49,22 +49,45 @@
   }
   &-sent {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(50%);
-    transition: all 2s;
+    opacity: 1;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+
     //   border-bottom: 2px solid black;
-    z-index: -1;
+    z-index: 100;
+    &__text {
+      margin-bottom: 0;
+      color: var(--black);
+    }
+    &--active {
+      z-index: 20;
+      top: 50%;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--black);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        animation: text-underline 2s forwards;
+      }
+    }
   }
   &--blured {
-    filter: blur(3px);
+    filter: blur(6px);
   }
   &-backdrop {
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--light);
-    opacity: 0.5;
+    opacity: 0.75;
     z-index: -1;
     &--active {
       z-index: 10;

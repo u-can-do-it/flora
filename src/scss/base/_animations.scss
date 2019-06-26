@@ -27,7 +27,7 @@
 .show {
   animation: show 1.5s;
 }
-@keyframes zzz {
+@keyframes showNav {
   0% {
     transform: rotateX(-90deg);
     opacity: 0;
@@ -37,5 +37,17 @@
   }
   100% {
     transform: rotateX(0deg);
+  }
+}
+@keyframes text-underline {
+  50% {
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }

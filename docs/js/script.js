@@ -29,8 +29,18 @@ document.getElementById("contact--form").addEventListener("submit", event => {
   }
 
   function submitForm(formData) {
-    var newMessageRef = contactRef.push(null, alert("message has been sent"));
-    newMessageRef.set(getContactJSON(inputIds));
+    var newMessageRef = contactRef.push();
+    newMessageRef.set(getContactJSON(inputIds), function(error) {
+      error ? alert(error) : messageSentAnimation();
+    });
+  }
+
+  function messageSentAnimation() {
+    document
+      .querySelector(".form-backdrop")
+      .classList.add("form-backdrop--active");
+    document.querySelector(".form-sent").classList.add("form-sent--active");
+    document.querySelector(".form").classList.add("form--blured");
   }
 });
 
