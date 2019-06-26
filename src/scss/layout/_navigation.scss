@@ -26,12 +26,15 @@
       color: var(--black);
       animation: showNav 0.5s;
       transform-origin: top;
+      & .navigation__list--nested {
+        background-color: var(--white);
+      }
     }
   }
   &__item {
     list-style: none;
     line-height: 1.7rem;
-    background-color: inherit;
+
     &--conteiner {
       position: relative;
       transition: all 0.3s;
@@ -46,13 +49,13 @@
   }
   &__list {
     display: flex;
-    background-color: inherit;
+
     &--nested {
       position: absolute;
       padding-top: 1rem;
       visibility: hidden;
       opacity: 0;
-      background-color: inherit;
+
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
       transition: all 0.3s;
     }
@@ -60,7 +63,6 @@
   &__link {
     &:link,
     &:visited {
-      background-color: inherit;
       display: inline-block;
       font-size: 1.7rem;
       font-weight: 400;
