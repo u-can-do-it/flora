@@ -1,4 +1,5 @@
-.btn {
+.btn,
+btn:visited {
   border: none;
 
   text-align: center;
@@ -17,8 +18,8 @@
     box-shadow: 0.1rem 0.3rem 0.8rem 0.5rem rgba($color-black, 0.2);
     cursor: pointer;
   }
-  &--red {
-    background-color: var(--bright-red);
-    color: var(--white);
-  }
+}
+.btn--red {
+  background-color: var(--bright-red);
+  color: var(--white);
 }

@@ -17,7 +17,8 @@ body {
   padding: 0;
 }
 
-// ::selection {
-//   background-color: $color-primary;
-//   color: $color-white;
-// }
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: unset;
+}
