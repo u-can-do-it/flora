@@ -56,10 +56,12 @@
         font-size: 25px;
       }
     }
-    &__text {
-      &-box {
-        min-width: 75%;
-      }
+  }
+}
+@include respond(tab-land) {
+  .header__text {
+    &-box {
+      min-width: 75%;
     }
   }
 }
