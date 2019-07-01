@@ -18,10 +18,12 @@
 }
 @keyframes slide-from-top {
   65% {
-    top: 55%;
+    transform: translate(-50%, -30%);
+    opacity: 1;
   }
   100% {
-    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
   }
 }
 .show {
