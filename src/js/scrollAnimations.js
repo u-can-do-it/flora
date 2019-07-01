@@ -53,3 +53,4 @@ scrollAnimations = function() {
   };
 };
 scrollAnimations().init();
+console.log("loaded js");

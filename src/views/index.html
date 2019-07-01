@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navigation-mobile">
-        <input type="checkbox" class="navigation-mobile__checkbox" id="navi-toggle">
+        <input type="checkbox" class="navigation-mobile__checkbox" id="nav-toggle">
 
         <label for="navi-toggle" class="navigation-mobile__button">
             <span class="navigation-mobile__icon">&nbsp;</span>
@@ -31,19 +31,36 @@
             <ul class="navigation-mobile__list">
                 <li class="navigation-mobile__item"><a href="#about" class="navigation-mobile__link">About US</a></li>
                 <li class="navigation-mobile__item navigation__item--conteiner">
-                    <a href="#pages" class="navigation-mobile__link">Pages </a>
+                        <a href="#pages" class="navigation-mobile__link">
+                            <label for="nav-toggle">Pages</label>
+                        </a>
                     <ul class="navigation-mobile__list--nested">
-                        <li class="navigation-mobile__item"><a href="#services" class="navigation-mobile__link
-                                    navigation-mobile__link--nested">Services</a></li>
-                        <li class="navigation-mobile__item"><a href="#statistics" class="navigation-mobile__link
-                                    navigation-mobile__link--nested">Statistic</a></li>
+                        <li class="navigation-mobile__item">
+                            <a href="#services" class="navigation-mobile__link
+                                    navigation-mobile__link--nested">
+                                    <label for="nav-toggle">Services</label>
+                                </a>
+                            </li>
+                        <li class="navigation-mobile__item">
+                            <a href="#statistics" class="navigation-mobile__link
+                                    navigation-mobile__link--nested">
+                                    <label for="nav-toggle">Statistic</label>
+                                </a>
+                            </li>
                         <!-- <li class="navigation-mobile__item"><a href="#testimonials" class="navigation-mobile__link
                                     navigation-mobile__link--nested">Testimonials</a></li> -->
-                        <li class="navigation-mobile__item"><a href="#gallery"
-                                class="navigation-mobile__link">gallery</a></li>
+                        <li class="navigation-mobile__item">
+                            <a href="#gallery"
+                                class="navigation-mobile__link"> 
+                                <label for="nav-toggle">Pages</label>
+                            </a>
+                        </li>
 
-                        <li class="navigation-mobile__item"><a href="#contact" class="navigation-mobile__link">contact
-                                us</a></li>
+                        <li class="navigation-mobile__item">
+                            <a href="#contact" class="navigation-mobile__link">
+                                    <label for="nav-toggle">Contact us</label>
+                            </a>
+                        </li>
                     </ul>
         </nav>
     </nav>
@@ -343,6 +360,7 @@
             </form>
         </div>
     </section>
+  
     <!-- <section class="section-testimonials u-m-top-big" id="testimonials">
         <div class="section-testimonials__conteiner u-box-center">
             <div class="review">
