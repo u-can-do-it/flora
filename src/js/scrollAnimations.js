@@ -25,6 +25,7 @@ scrollAnimations = function() {
     window.addEventListener("scroll", checkPosition);
     window.addEventListener("resize", init);
   }
+
   function checkPosition() {
     // apearing elements on scroll
     for (let i = 0; i < elems.length; i++) {

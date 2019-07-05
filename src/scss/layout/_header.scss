@@ -16,6 +16,7 @@
   @include respond(phone) {
     height: 100vh;
   }
+
   &__text {
     &-box {
       background-color: rgba(0, 0, 0, 0.6);
